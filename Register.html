@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <script>
+            function validateForm() {
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var phone = document.getElementById("phone").value;
+                var dob = document.getElementById("dob").value;
+                var gender = document.querySelector('input[name="gender"]:checked');
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+    
+                if (name.trim() === "") {
+                    alert("Please enter your name.");
+                    return false;
+                }
+    
+                if (email.trim() === "") {
+                    alert("Please enter your email.");
+                    return false;
+                }
+    
+                if (phone.trim() === "") {
+                    alert("Please enter your phone number.");
+                    return false;
+                }
+    
+                if (dob.trim() === "") {
+                    alert("Please enter your date of birth.");
+                    return false;
+                }
+    
+                if (gender === null) {
+                    alert("Please select your gender.");
+                    return false;
+                }
+    
+                if (username.trim() === "") {
+                    alert("Please enter a username.");
+                    return false;
+                }
+    
+                if (password.trim() === "") {
+                    alert("Please enter a password.");
+                    return false;
+                }
+    
+                return true; // Form submission will proceed if validation passes
+            }
+        </script>
+      <link rel="stylesheet" href="Register.css">
+      <title>Register Page</title>
+</head>
+<body>
+      <center><h1>Register</h1></center>
+      <form action="login.html" onsubmit="return validateForm()">
+            Name:<input type="text" id="name" name="name" placeholder="Enter name"><br>
+            <br>
+            Email:<input type="email" id="email" name="email" placeholder="Enter email"><br>
+            <br>
+            Phone:<input type="number" id="phone" name="phone" placeholder="Enter Email"><br>
+            <br>
+            DOB:<input type="date" id="dob" name="dob" placeholder="Enter D.O.B"><br>
+            <br>
+            Gender:<input type="radio" id="gender" name="gender">Male
+            <input type="radio" id="gender" name="gender">Female
+            <br>
+            <br>
+            Username:<input type="text" id="username" name="username" placeholder="Enter username">
+            <br>
+            <br>
+           Password:<input type="password" id="password" name="password" placeholder="Enter password">
+            <br>
+            <br>
+            <input type="submit" value="Register">
+      </form>
+      
+</body>
+</html>

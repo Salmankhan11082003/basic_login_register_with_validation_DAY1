@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <link rel="stylesheet" href="login.css">
+      <script>
+            function validateForm() {
+                  var username = document.getElementById("username").value;
+                  var password = document.getElementById("password").value;
+
+                  if (username.trim() === "") {
+                        alert("Please enter a username.");
+                        return false;
+                  }
+
+                  if (password.trim() === "") {
+                        alert("Please enter a password.");
+                        return false;
+                  }
+
+                  if (username.trim() !== "salman" || password !== "shizu0410") {
+                        alert("Invalid username or password.");
+                        return false;
+                  }
+
+                  return true;
+            }         
+      </script>
+      <title>Home Page</title>
+</head>
+
+<body>
+      <center>
+            <h1>Home Page</h1>
+      </center>
+      <center>
+            <form action="success.html" onsubmit="return validateForm()">
+                  Username:<input type="text" id="username" name="username" placeholder="enter username"><br><br>
+                  Password:<input type="password" id="password" name="password"  placeholder="enter password">
+                  <br><br>
+                  <input type="submit" value="Login" `><br><br>
+                  <a href="register.html"><input type="button" value="Create An Account"></a>
+            </form>
+      </center>
+
+
+
+</body>
+
+</html>
